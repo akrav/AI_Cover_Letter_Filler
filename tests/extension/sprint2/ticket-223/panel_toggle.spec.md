@@ -1,3 +1,10 @@
+# TICKET-223 — Panel toggle + hotkey checks
+
+Expectations:
+- [x] Panel toggle button hides/shows panel
+- [x] Hotkey toggles panel visibility (default Ctrl+Shift+K)
+- [x] State persists in `sessionStorage`
+
 # TICKET-223 — Panel toggle + hotkey persistence checks
 
 Expectations:
