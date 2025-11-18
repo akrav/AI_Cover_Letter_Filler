@@ -1,0 +1,36 @@
+name: Extension CI (plan stub)
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+      - name: Install
+        run: |
+          if [ -f package.json ]; then npm ci; else echo "No package.json (stub)"; fi
+      - name: Lint
+        run: |
+          if [ -f package.json ]; then npm run lint --if-present; else echo "no lint (stub)"; fi
+      - name: Build
+        run: |
+          if [ -f package.json ]; then npm run build --if-present; else echo "no build (stub)"; fi
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: extension-dist
+          path: extension/dist
+          if-no-files-found: ignore
+
+

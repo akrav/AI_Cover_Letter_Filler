@@ -13,4 +13,6 @@ Add a GitHub Actions workflow to build the extension and run tests.
 - CI plan documented; future PR will add the workflow file.
 - Includes caching, Node LTS, run unit tests, and artifact upload.
 
+Status: Completed – 2025-11-18
+
 
