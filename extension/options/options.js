@@ -10,6 +10,11 @@
   const exportTelemetryBtn = document.getElementById('exportTelemetry');
   const clearTelemetryBtn = document.getElementById('clearTelemetry');
   const hotkeyEl = document.getElementById('hotkey');
+  const onboardingModal = document.getElementById('onboardingModal');
+  const startOnboardingBtn = document.getElementById('startOnboarding');
+  const completeOnboardingBtn = document.getElementById('completeOnboarding');
+  const cancelOnboardingBtn = document.getElementById('cancelOnboarding');
+  const onboardingStatusEl = document.getElementById('onboardingStatus');
   const apiKeyErrorEl = document.getElementById('apiKeyError');
   const budgetCapErrorEl = document.getElementById('budgetCapError');
 
@@ -79,6 +84,23 @@
       statusEl.textContent = 'Cleared';
       setTimeout(() => { statusEl.textContent = 'Saved'; hide(statusEl); }, 1500);
     });
+  });
+
+  // Onboarding wizard
+  startOnboardingBtn.addEventListener('click', () => {
+    onboardingModal.style.display = '';
+  });
+  cancelOnboardingBtn.addEventListener('click', () => {
+    onboardingModal.style.display = 'none';
+  });
+  completeOnboardingBtn.addEventListener('click', () => {
+    // Save current form values as part of onboarding
+    form.dispatchEvent(new Event('submit', { cancelable: true }));
+    show(onboardingStatusEl);
+    setTimeout(() => {
+      onboardingModal.style.display = 'none';
+      hide(onboardingStatusEl);
+    }, 1200);
   });
 })();
 

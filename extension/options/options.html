@@ -64,6 +64,25 @@
       <button id="exportTelemetry" type="button">Export telemetry JSON</button>
       <button id="clearTelemetry" type="button" style="margin-left:8px;">Clear telemetry</button>
     </div>
+    <hr />
+    <div class="row">
+      <button id="startOnboarding" type="button">Start onboarding</button>
+    </div>
+    <div id="onboardingModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:2147483647;">
+      <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;border-radius:8px;padding:16px;width:420px;box-shadow:0 4px 16px rgba(0,0,0,0.2);">
+        <h2>Welcome</h2>
+        <ol>
+          <li>Enter your API key</li>
+          <li>Choose your default generation model</li>
+          <li>Set budget cap and strictness</li>
+        </ol>
+        <div style="margin-top:12px;">
+          <button id="completeOnboarding" type="button">Complete</button>
+          <button id="cancelOnboarding" type="button" style="margin-left:8px;">Cancel</button>
+        </div>
+        <div id="onboardingStatus" class="success" style="display:none;margin-top:8px;">Onboarding complete</div>
+      </div>
+    </div>
     <script src="options.js"></script>
   </body>
 </html>
