@@ -52,6 +52,19 @@ function resolveCompany(rawUrl) {
     if (homepageUrl) {
       homepageUrl = canonicalUrl(homepageUrl);
     }
+    // Fallback to ExaResolver stub when mapping didn't find a name/homepage
+    if (!companyName || !homepageUrl) {
+      const hint = companyName || u.hostname.split('.')[0];
+      if (window.ExaResolver && typeof window.ExaResolver.resolveViaSearch === 'function') {
+        const via = window.ExaResolver.resolveViaSearch(hint);
+        if (via && via.homepageUrl) {
+          companyName = companyName || via.companyName;
+          homepageUrl = via.homepageUrl;
+          confidence = Math.max(confidence, via.confidence);
+          method = via.method || method;
+        }
+      }
+    }
   } catch {
     // ignore
   }

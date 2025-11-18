@@ -12,4 +12,6 @@ Add Exa search fallback (stubbed) to resolve company homepage and basic scoring 
 ## Acceptance Criteria
 - Search fallback invoked on mapping miss; canonical HTTPS URL chosen; confidence reported.
 
+Status: Completed – 2025-11-18
+
 

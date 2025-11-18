@@ -29,7 +29,7 @@
 - TICKET-216 — JD extraction (Greenhouse): Status: Completed – 2025-11-18 ([greenhouse_extract.spec.md](../tests/extension/sprint2/ticket-216/greenhouse_extract.spec.md))
 - TICKET-219 — Ashby page detection: Status: Completed – 2025-11-18 ([ashby_detect.spec.md](../tests/extension/sprint2/ticket-219/ashby_detect.spec.md))
 - TICKET-207 — Company resolver (mapping-only): Status: Completed – 2025-11-18 ([company_resolver.js](../extension/shared/company_resolver.js), [company_resolver.spec.md](../tests/extension/sprint2/ticket-207/company_resolver.spec.md))
-- TICKET-222 — Exa resolver stub + scorer: Status: Pending
+- TICKET-222 — Exa resolver stub + scorer: Status: Completed – 2025-11-18 ([exa_resolver.js](../extension/shared/exa_resolver.js), [exa_resolver.spec.md](../tests/extension/sprint2/ticket-222/exa_resolver.spec.md))
 - TICKET-208 — Template variable parser (implementation): Status: Completed – 2025-11-18 ([template_parser.js](../extension/shared/template_parser.js), [template_parser.spec.md](../tests/extension/sprint2/ticket-208/template_parser.spec.md))
 - TICKET-209 — UI panel scaffold and toggle: Status: Completed – 2025-11-18 ([content.js](../extension/content.js), [panel.spec.md](../tests/extension/sprint2/ticket-209/panel.spec.md))
 - TICKET-213 — Boot banner and connection hotkey: Status: Completed – 2025-11-18 ([content.js](../extension/content.js), [boot_banner.spec.md](../tests/extension/sprint2/ticket-213/boot_banner.spec.md))
