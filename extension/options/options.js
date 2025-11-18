@@ -15,6 +15,7 @@
   const completeOnboardingBtn = document.getElementById('completeOnboarding');
   const cancelOnboardingBtn = document.getElementById('cancelOnboarding');
   const onboardingStatusEl = document.getElementById('onboardingStatus');
+  const clearAllDataBtn = document.getElementById('clearAllData');
   const apiKeyErrorEl = document.getElementById('apiKeyError');
   const budgetCapErrorEl = document.getElementById('budgetCapError');
 
@@ -101,6 +102,26 @@
       onboardingModal.style.display = 'none';
       hide(onboardingStatusEl);
     }, 1200);
+  });
+
+  // Clear all local data
+  clearAllDataBtn.addEventListener('click', () => {
+    if (!confirm('Are you sure you want to clear all local data for this extension? This cannot be undone.')) {
+      return;
+    }
+    chrome.storage.local.clear(() => {
+      // Reflect cleared state in UI
+      apiKeyEl.value = '';
+      modelEl.value = 'gpt-4o-mini';
+      budgetCapEl.value = '0.10';
+      strictnessEl.value = 'balanced';
+      telemetryOptInEl.checked = false;
+      hotkeyEl.value = 'Ctrl+Shift+K';
+      schemaVersionEl.textContent = '0';
+      show(statusEl);
+      statusEl.textContent = 'All data cleared';
+      setTimeout(() => { statusEl.textContent = 'Saved'; hide(statusEl); }, 1800);
+    });
   });
 })();
 

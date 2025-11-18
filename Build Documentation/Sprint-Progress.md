@@ -39,7 +39,7 @@
 - TICKET-212 — CI workflow for extension build/tests: Status: Completed – 2025-11-18 ([extension.yml](../.github/workflows/extension.yml), [ci_plan.md](../tests/extension/sprint2/ticket-212/ci_plan.md))
 - TICKET-224 — CI test matrix + artifacts: Status: Completed – 2025-11-18 ([extension.yml](../.github/workflows/extension.yml), [ci_artifacts.spec.md](../tests/extension/sprint2/ticket-224/ci_artifacts.spec.md))
 - TICKET-225 — First‑run onboarding wizard: Status: Completed – 2025-11-18 ([onboarding.spec.md](../tests/extension/sprint2/ticket-225/onboarding.spec.md))
-- TICKET-226 — Options: “Clear all local data”: Status: Pending
+- TICKET-226 — Options: “Clear all local data”: Status: Completed – 2025-11-18 ([clear_all.spec.md](../tests/extension/sprint2/ticket-226/clear_all.spec.md))
 - TICKET-227 — Retention window for local data: Status: Pending
 - TICKET-228 — Export/Import settings (JSON): Status: Pending
 - TICKET-229 — Offline / cached-only mode toggle: Status: Pending
