@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>AI Cover Letter Filler — Options</title>
+    <style>
+      body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; padding: 16px; }
+      .row { margin-bottom: 12px; }
+      label { display: block; font-weight: 600; margin-bottom: 4px; }
+      input, select { width: 320px; padding: 8px; }
+      .hint { font-size: 12px; color: #666; }
+      .error { color: #b00020; font-size: 12px; }
+      .success { color: #0a7f27; font-size: 12px; }
+      button { padding: 8px 12px; }
+    </style>
+  </head>
+  <body>
+    <h1>Options</h1>
+    <form id="options-form">
+      <div class="row">
+        <label for="apiKey">API Key</label>
+        <input id="apiKey" type="password" autocomplete="off" />
+        <div id="apiKeyError" class="error" style="display:none;"></div>
+        <div class="hint">Stored locally. Not logged.</div>
+      </div>
+      <div class="row">
+        <label for="model">Generation Model</label>
+        <select id="model">
+          <option value="gpt-4o-mini">gpt-4o-mini (default)</option>
+          <option value="gpt-4o">gpt-4o</option>
+        </select>
+      </div>
+      <div class="row">
+        <label for="budgetCap">Budget Cap (USD per job)</label>
+        <input id="budgetCap" type="number" min="0" step="0.01" value="0.10" />
+        <div id="budgetCapError" class="error" style="display:none;"></div>
+      </div>
+      <div class="row">
+        <label for="strictness">Evidence Strictness</label>
+        <select id="strictness">
+          <option value="balanced">balanced</option>
+          <option value="strict">strict</option>
+          <option value="lenient">lenient</option>
+        </select>
+      </div>
+      <div class="row">
+        <button type="submit">Save</button>
+        <span id="status" class="success" style="display:none;margin-left:8px;">Saved</span>
+      </div>
+    </form>
+    <script src="options.js"></script>
+  </body>
+</html>
+
+

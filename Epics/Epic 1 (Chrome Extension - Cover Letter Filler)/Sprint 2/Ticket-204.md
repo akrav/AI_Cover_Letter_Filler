@@ -13,4 +13,6 @@ Create an options page to store API keys and settings (LLM model, budgets, stric
 - Keys/settings saved to chrome.storage; redact in logs.
 - Validation errors shown inline.
 
+Status: Completed – 2025-11-18
+
 
