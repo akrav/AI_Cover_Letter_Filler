@@ -11,6 +11,8 @@
 (function panel() {
   const PANEL_ID = 'ai-clf-panel';
   if (document.getElementById(PANEL_ID)) return;
+  // Ensure migrations run once per tab load (best-effort)
+  try { window.StorageMigrations && window.StorageMigrations.runMigrations(); } catch (_) {}
   const container = document.createElement('div');
   container.id = PANEL_ID;
   container.setAttribute('style',

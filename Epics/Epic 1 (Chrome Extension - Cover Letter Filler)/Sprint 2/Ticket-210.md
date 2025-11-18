@@ -13,4 +13,6 @@ Define extension storage keys and introduce a simple versioned migration system.
 - Migrations are idempotent; failures logged and recoverable.
 - Version stored and reported in options.
 
+Status: Completed – 2025-11-18
+
 

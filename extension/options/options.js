@@ -5,6 +5,7 @@
   const budgetCapEl = document.getElementById('budgetCap');
   const strictnessEl = document.getElementById('strictness');
   const statusEl = document.getElementById('status');
+  const schemaVersionEl = document.getElementById('schemaVersion');
   const apiKeyErrorEl = document.getElementById('apiKeyError');
   const budgetCapErrorEl = document.getElementById('budgetCapError');
 
@@ -25,11 +26,12 @@
   }
 
   function load() {
-    chrome.storage.local.get(['apiKey', 'model', 'budgetCap', 'strictness'], (data) => {
+    chrome.storage.local.get(['apiKey', 'model', 'budgetCap', 'strictness', 'schemaVersion'], (data) => {
       apiKeyEl.value = data.apiKey ? '********' : '';
       modelEl.value = data.model || 'gpt-4o-mini';
       budgetCapEl.value = typeof data.budgetCap === 'number' ? String(data.budgetCap) : '0.10';
       strictnessEl.value = data.strictness || 'balanced';
+      schemaVersionEl.textContent = String(data.schemaVersion || 0);
     });
   }
 
