@@ -9,7 +9,7 @@
 - TICKET-107 — Research pipeline & evidence rules (Exa/Browserbase): Status: Completed – 2025-11-18 ([Integrations - Smithery & MCP.md](./Integrations - Smithery & MCP.md), [research_flow.md](../tests/docs/sprint1/ticket-107/research_flow.md))
 - TICKET-108 — Prompt patterns for style‑preserving, evidence‑bounded fills: Status: Completed – 2025-11-18 ([Prompt Patterns.md](./Prompt Patterns.md), [prompt_examples.md](../tests/docs/sprint1/ticket-108/prompt_examples.md))
 - TICKET-109 — Approval UI spec (variable table layout): Status: Completed – 2025-11-18 ([Approval UI Spec.md](./Approval UI Spec.md), [approval_examples.md](../tests/docs/sprint1/ticket-109/approval_examples.md))
-- TICKET-110 — Export plan (DOCX/PDF) and folder workflow: Status: Pending
+- TICKET-110 — Export plan (DOCX/PDF) and folder workflow: Status: Completed – 2025-11-18 ([Export Plan.md](./Export Plan.md), [export_examples.md](../tests/docs/sprint1/ticket-110/export_examples.md))
 - TICKET-111 — Security & permissions checklist: Status: Pending
 - TICKET-112 — Update Sprint-Progress.md entries: Status: Pending
 

@@ -15,4 +15,6 @@ Decide on libraries and flow for rendering DOCX/PDF and saving to a chosen folde
 - Naming: `<UserFirstName>'s <CompanyName> Cover Letter.{docx,pdf}`.
 - Directory Picker flow and downloads fallback documented.
 
+Status: Completed – 2025-11-18
+
 
