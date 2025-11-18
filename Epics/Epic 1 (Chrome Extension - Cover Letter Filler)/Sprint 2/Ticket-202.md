@@ -13,4 +13,6 @@ Inject a content script and post a “ready” message to the background worker.
 ## Acceptance Criteria
 - Content script loads reliably and sends the ready message.
 
+Status: Completed – 2025-11-18
+
 
