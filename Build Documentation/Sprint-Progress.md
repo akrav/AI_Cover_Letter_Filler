@@ -47,7 +47,7 @@
 
 ## Epic 1 (Chrome Extension - Cover Letter Filler) — Sprint 3
 
-- TICKET-301 — Exa search client (retry, rate limit, stubs): Status: Pending
+- TICKET-301 — Exa search client (retry, rate limit, stubs): Status: Completed – 2025-11-18 ([exa_client.js](../extension/shared/exa_client.js), [exa_client.spec.md](../tests/extension/sprint3/ticket-301/exa_client.spec.md))
 - TICKET-302 — Homepage detection & canonical URL finder: Status: Pending
 - TICKET-303 — Crawl pages with robots compliance: Status: Pending
 - TICKET-313 — Robots.txt allow/deny parser: Status: Pending

@@ -19,7 +19,7 @@
         "*://*.greenhouse.io/*",
         "*://*.ashbyhq.com/*"
       ],
-      "js": ["shared/messaging.js", "shared/jd_extract.js", "shared/exa_resolver.js", "shared/company_resolver.js", "shared/storage_migrations.js", "shared/retention.js", "shared/telemetry.js", "content.js"],
+      "js": ["shared/messaging.js", "shared/jd_extract.js", "shared/exa_client.js", "shared/exa_resolver.js", "shared/company_resolver.js", "shared/storage_migrations.js", "shared/retention.js", "shared/telemetry.js", "content.js"],
       "run_at": "document_idle"
     }
   ],
