@@ -1,7 +1,7 @@
 ## Epic 1 (Chrome Extension - Cover Letter Filler) — Sprint 1
 
 - TICKET-101 — Supabase schema draft for core entities: Status: Completed – 2025-11-18 ([Data Model.sql](./Data Model.sql), [validate_schema.md](../tests/docs/sprint1/ticket-101/validate_schema.md))
-- TICKET-102 — Template variable syntax and parser spec: Status: Pending
+- TICKET-102 — Template variable syntax and parser spec: Status: Completed – 2025-11-18 ([Template Variables.md](./Template Variables.md), [template_examples.md](../tests/docs/sprint1/ticket-102/template_examples.md))
 - TICKET-103 — Style modeling rubric and descriptors: Status: Pending
 - TICKET-104 — Model selection and cost plan: Status: Pending
 - TICKET-105 — Backend API surface (spec): Status: Pending
