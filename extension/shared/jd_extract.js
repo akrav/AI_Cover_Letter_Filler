@@ -43,6 +43,7 @@ function detectPlatformFromUrl(url) {
     const h = u.hostname;
     if (h.includes('workday')) return 'workday';
     if (h.includes('lever.co')) return 'lever';
+    if (h.includes('ashbyhq.com')) return 'ashby';
     if (h.includes('greenhouse.io')) return 'greenhouse';
     return 'unknown';
   } catch {

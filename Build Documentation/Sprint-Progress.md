@@ -26,7 +26,7 @@
 - TICKET-214 — JD extraction (Workday): Status: Completed – 2025-11-18 ([workday_extract.spec.md](../tests/extension/sprint2/ticket-214/workday_extract.spec.md))
 - TICKET-215 — JD extraction (Lever): Status: Completed – 2025-11-18 ([lever_extract.spec.md](../tests/extension/sprint2/ticket-215/lever_extract.spec.md))
 - TICKET-216 — JD extraction (Greenhouse): Status: Completed – 2025-11-18 ([greenhouse_extract.spec.md](../tests/extension/sprint2/ticket-216/greenhouse_extract.spec.md))
-- TICKET-219 — Ashby page detection: Status: Pending
+- TICKET-219 — Ashby page detection: Status: Completed – 2025-11-18 ([ashby_detect.spec.md](../tests/extension/sprint2/ticket-219/ashby_detect.spec.md))
 - TICKET-207 — Company resolver (mapping-only): Status: Completed – 2025-11-18 ([company_resolver.js](../extension/shared/company_resolver.js), [company_resolver.spec.md](../tests/extension/sprint2/ticket-207/company_resolver.spec.md))
 - TICKET-222 — Exa resolver stub + scorer: Status: Pending
 - TICKET-208 — Template variable parser (implementation): Status: Completed – 2025-11-18 ([template_parser.js](../extension/shared/template_parser.js), [template_parser.spec.md](../tests/extension/sprint2/ticket-208/template_parser.spec.md))
