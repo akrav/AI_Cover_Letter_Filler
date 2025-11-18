@@ -48,6 +48,14 @@
         <div class="hint">Stores local events for debugging; no network calls.</div>
       </div>
       <div class="row">
+        <label for="retentionDays">Retention (days)</label>
+        <select id="retentionDays">
+          <option value="30">30</option>
+          <option value="90" selected>90</option>
+        </select>
+        <div class="hint">Old local data is pruned beyond this window.</div>
+      </div>
+      <div class="row">
         <label for="hotkey">Panel Hotkey</label>
         <input id="hotkey" type="text" value="Ctrl+Shift+K" />
         <div class="hint">Format example: Ctrl+Shift+K</div>

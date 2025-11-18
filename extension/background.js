@@ -7,6 +7,11 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
     sendResponse({ ack: true });
     return true;
   }
+  if (type === 'platform_detected') {
+    // Minimal ack for platform detection events
+    sendResponse({ ok: true });
+    return true;
+  }
   // Messaging bus handlers
   if (type === 'ping') {
     sendResponse({ id, ok: true, type, result: 'pong' });
@@ -23,5 +28,8 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   }
   return true;
 });
+
+// TICKET-227: schedule retention pruning (best effort)
+try { window.Retention && window.Retention.schedule(); } catch (_) {}
 
 
