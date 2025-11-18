@@ -11,6 +11,11 @@
   - Writing sample indexing (style anchors).
   - Prior Q&A retrieval for similar prompts.
 
+### Model overrides (per job/session)
+- `model_generation` (default: `gpt-4o-mini`)
+- `model_embedding` (default: `text-embedding-3-small`)
+- Override is recorded on the job_session and used for forecasting budgets.
+
 ## Style Modeling
 - Inputs: user writing samples + approved template(s).
 - Outputs: style_profile containing:
@@ -46,8 +51,33 @@
   - Fail closed on missing evidence (return a helpful error or request more info).
 
 ## Cost Controls
-- Token budgets per job.
+- Token budgets per job (see below).
 - Evidence strictness levels (strict → requires 2+ sources; balanced → 1; lenient → allows user‑approved manual notes).
-- Model override per job/session.
+- Model override per job/session (see Models).
+
+### Per‑job token budget (MVP)
+| Phase | Purpose | Input tokens | Output tokens | Notes |
+|---|---|---:|---:|---|
+| Style recall | Retrieve style_profile + exemplars | 1,000 | 0 | Cached after first use |
+| Evidence ingest | Summarize JD + quotes (grounding) | 1,500 | 300 | Capped by quote count |
+| Draft generation | First pass draft | 1,200 | 800 | ~650–900 words |
+| Revision pass | Tighten to style + facts | 800 | 500 | Optional (quality) |
+| QA (optional) | Short answers pulled from history | 600 | 300 | Only if Q&A requested |
+| Total (default) |  | 5,100 | 1,900 | ~7,000 tokens/job |
+
+Assumptions:
+- gpt‑4o‑mini pricing (reference) and `text-embedding-3-small` for embeddings.
+- Embedding costs are dominated by writing samples and stored once.
+
+### Cost caps (USD)
+- Default cap per job: $0.10 (target) with hard stop at $0.15.
+- Economy mode: $0.05 cap (skip revision pass; shorter draft ~500–600 words).
+- Quality mode: $0.25 cap (enable revision pass; add light stylistic polish pass).
+- If the forecasted cost > cap, abort with an actionable message and suggested switches.
+
+### Budget forecasting
+- Forecast uses token estimates × current model pricing.
+- Show a per‑phase breakdown in the approval UI before running.
+- Persist the actuals per phase for later tuning.
 
 

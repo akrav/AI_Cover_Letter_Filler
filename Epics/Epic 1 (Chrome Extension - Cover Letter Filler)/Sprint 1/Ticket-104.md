@@ -15,4 +15,6 @@ Update `Build Documentation/LLM & RAG Strategy.md` with model choices and cost c
 - Per‑job token budget strategy documented.
 - Model override setting noted for later implementation.
 
+Status: Completed – 2025-11-18
+
 
