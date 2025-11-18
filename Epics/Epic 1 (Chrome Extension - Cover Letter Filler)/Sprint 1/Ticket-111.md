@@ -15,4 +15,6 @@ Create a security checklist for permissions, token storage, PII handling, and ev
 - Token storage and redaction guidelines noted.
 - Provenance requirements (quote+URL) emphasized as mandatory.
 
+Status: Completed – 2025-11-18
+
 
