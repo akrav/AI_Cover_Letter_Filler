@@ -15,4 +15,6 @@ Create a concise rubric for capturing style (tone, cadence, structure, lexicon) 
 - JSON schema for `style_profile` drafted and referenced by other docs.
 - Linked in Sprint-Progress.md.
 
+Status: Completed – 2025-11-18
+
 
