@@ -41,6 +41,22 @@
 - Approve toggles enabled only when evidence quotes and URLs are present.
 - Inline edits (separate ticket) reset approval to “needs review.”
 
+## States
+- Empty: no variables yet → prompt to “Start analysis.”
+- In Progress: generating candidates → row-level spinners in Draft column.
+- Error: missing evidence → Approve disabled; row shows “Add evidence” link and error badge.
+- Approved: row Approved; locked unless user edits Final.
+- Readiness indicator (Export): shows “Ready to export” when all required variables are approved; otherwise shows count remaining (e.g., “2 of 3 approved”).
+
+## Wireframe (ASCII)
+```
+| Variable        | Quote (excerpt)                | URL       | Rationale         | Draft                 | Final                 | Approve |
+|-----------------|--------------------------------|-----------|-------------------|-----------------------|-----------------------|---------|
+| company_name    | "Acme Corp"                    | acme.com  | From JD header    | Acme Corp             | Acme Corp             | [x]     |
+| position_title  | "Senior ML Engineer"           | careers   | From JD title     | Senior ML Engineer    | Senior ML Engineer    | [x]     |
+| company_mission | "Make AI accessible..."        | about     | From About page   | Make AI accessible... | Make AI accessible... | [ ]     |
+```
+
 ## Accessibility
 - Keyboard navigation across rows and columns.
 - ARIA labels for buttons and cells.

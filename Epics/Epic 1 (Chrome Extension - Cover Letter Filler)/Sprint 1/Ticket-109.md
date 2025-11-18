@@ -15,4 +15,6 @@ Specify the extension UI for reviewing evidence and approving final fills per va
 - Edit paths documented; error states (missing evidence) covered.
 - Save/Export readiness indicator defined.
 
+Status: Completed – 2025-11-18
+
 
