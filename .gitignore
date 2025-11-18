@@ -1,0 +1,15 @@
+# Node/TS common
+**/node_modules/
+**/dist/
+coverage/
+
+# Env files
+.env
+.env.*
+
+# OS cruft
+.DS_Store
+
+
+# Ignore local job application artifacts
+Job Applications/**
