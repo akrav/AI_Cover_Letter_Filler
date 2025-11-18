@@ -15,4 +15,6 @@ Expand `Build Documentation/Integrations - Smithery & MCP.md` with specific flow
 - Evidence scoring (relevance, recency, authoritative domain) documented.
 - Caching strategy and retry policy documented.
 
+Status: Completed – 2025-11-18
+
 

@@ -10,6 +10,32 @@ We will leverage Smithery to give the agent access to research and browsing tool
 
 Reference: `https://smithery.ai/`
 
+## Research Flow (JD → queries → results → quotes)
+1) Inputs:
+   - Job description (JD), company name/domain (if available), role title.
+2) Query generation:
+   - Produce scoped queries: `<company> mission`, `about <company>`, `<company> press`, `<company> values`, `<company> careers`.
+3) Search (Exa):
+   - Fetch top‑k results (k≈10) with metadata (title, URL, snippet, date).
+   - Filter by domain allowlist (company site, reputable press) and freshness (≤24 months).
+4) Fetch:
+   - Use Exa page fetch for static pages.
+   - Fallback to Browserbase render for dynamic pages (JS dependent).
+5) Extraction:
+   - Extract candidate quotes (≤300 chars) with canonical URL; prefer sections near headings like “Mission”, “Values”.
+   - Normalize URL (canonical if provided), strip tracking params.
+6) Scoring:
+   - Relevance (embedding similarity to variable description), recency (newer is better), authority (domain score).
+   - Score = 0.5·relevance + 0.3·authority + 0.2·recency (0–1).
+7) Dedup & caching:
+   - Deduplicate by normalized quote text hash and canonical URL.
+   - Cache page snapshots per job_session to avoid re‑fetch; TTL 7 days.
+8) Governance:
+   - Respect robots.txt (deny → skip); crawl delay 2–5s between same‑domain requests.
+   - Rate limit external calls; exponential backoff on 429/5xx.
+9) Persistence:
+   - Store quotes as `variable_evidence` with `quote`, `evidence_url`, `source_title`, `score`.
+
 ## Usage Model
 - Backend calls Smithery server endpoints as tools from a single MCP connection (one catalog).
 - Tool outputs (quotes, URLs, screenshots) are persisted alongside evidence records for each variable.
