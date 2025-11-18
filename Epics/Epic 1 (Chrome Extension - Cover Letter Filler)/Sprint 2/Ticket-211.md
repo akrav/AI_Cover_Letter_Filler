@@ -13,4 +13,6 @@ Add a minimal telemetry event queue (local only) with an explicit opt-in.
 - No telemetry unless enabled.
 - Export events (JSON) for debugging via options page.
 
+Status: Completed – 2025-11-18
+
 

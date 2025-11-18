@@ -34,7 +34,7 @@
 - TICKET-213 — Boot banner and connection hotkey: Status: Pending
 - TICKET-223 — Panel toggle and hotkey: Status: Pending
 - TICKET-210 — Storage schema versioning and migrations: Status: Completed – 2025-11-18 ([storage_migrations.js](../extension/shared/storage_migrations.js), [storage_migration.spec.md](../tests/extension/sprint2/ticket-210/storage_migration.spec.md))
-- TICKET-211 — Telemetry stub + opt-in switch: Status: Pending
+- TICKET-211 — Telemetry stub + opt-in switch: Status: Completed – 2025-11-18 ([telemetry.js](../extension/shared/telemetry.js), [telemetry.spec.md](../tests/extension/sprint2/ticket-211/telemetry.spec.md))
 - TICKET-212 — CI workflow for extension build (lint/build): Status: Pending
 - TICKET-224 — CI test matrix + artifacts: Status: Pending
 - TICKET-225 — First‑run onboarding wizard: Status: Pending

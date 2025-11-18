@@ -44,12 +44,20 @@
         </select>
       </div>
       <div class="row">
+        <label><input id="telemetryOptIn" type="checkbox" /> Enable telemetry (local only)</label>
+        <div class="hint">Stores local events for debugging; no network calls.</div>
+      </div>
+      <div class="row">
         <button type="submit">Save</button>
         <span id="status" class="success" style="display:none;margin-left:8px;">Saved</span>
       </div>
     </form>
     <div class="row">
       <div class="hint">Schema version: <span id="schemaVersion">—</span></div>
+    </div>
+    <div class="row">
+      <button id="exportTelemetry" type="button">Export telemetry JSON</button>
+      <button id="clearTelemetry" type="button" style="margin-left:8px;">Clear telemetry</button>
     </div>
     <script src="options.js"></script>
   </body>
