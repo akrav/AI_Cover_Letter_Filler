@@ -13,4 +13,6 @@ Add a lightweight in-page panel to start/stop the assistant, show detection stat
 - Panel can be toggled; persists state per tab.
 - No visual overlap with core page elements in fixtures.
 
+Status: Completed – 2025-11-18
+
 
