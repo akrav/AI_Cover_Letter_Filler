@@ -29,7 +29,7 @@
 - TICKET-219 — Ashby page detection: Status: Pending
 - TICKET-207 — Company resolver (mapping-only): Status: Completed – 2025-11-18 ([company_resolver.js](../extension/shared/company_resolver.js), [company_resolver.spec.md](../tests/extension/sprint2/ticket-207/company_resolver.spec.md))
 - TICKET-222 — Exa resolver stub + scorer: Status: Pending
-- TICKET-208 — Template variable parser (implementation): Status: Pending
+- TICKET-208 — Template variable parser (implementation): Status: Completed – 2025-11-18 ([template_parser.js](../extension/shared/template_parser.js), [template_parser.spec.md](../tests/extension/sprint2/ticket-208/template_parser.spec.md))
 - TICKET-209 — UI panel scaffold (skeleton): Status: Pending
 - TICKET-213 — Boot banner and connection hotkey: Status: Pending
 - TICKET-223 — Panel toggle and hotkey: Status: Pending

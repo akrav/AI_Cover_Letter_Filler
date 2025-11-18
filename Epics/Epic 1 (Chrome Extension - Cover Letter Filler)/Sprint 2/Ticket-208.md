@@ -13,4 +13,6 @@ Implement the parser based on the Sprint 1 spec; support `{{variable_key}}` with
 - Detects required/missing/duplicate variables as per spec.
 - Ready to use in rendering pipeline later.
 
+Status: Completed – 2025-11-18
+
 
