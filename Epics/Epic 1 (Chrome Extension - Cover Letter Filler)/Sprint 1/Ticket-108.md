@@ -15,4 +15,6 @@ Draft system/user prompts and JSON output schema for generating variable fills g
 - JSON schema for variable outputs defined.
 - Example prompt/response pair included.
 
+Status: Completed – 2025-11-18
+
 
