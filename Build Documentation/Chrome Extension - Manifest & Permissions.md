@@ -17,6 +17,15 @@
 - Host permissions: narrow allowlist for known job domains; `<all_urls>` in dev
 - Optional: "clipboardWrite" (if we support copy-to-clipboard instead of injection)
 
+### Allowlist (production)
+- `*://*.workday.com/*`
+- `*://*.lever.co/*`
+- `*://*.greenhouse.io/*`
+- `*://*.ashbyhq.com/*`
+
+Dev mode:
+- You may temporarily use `<all_urls>` during early development, but switch to the allowlist for production builds.
+
 ## File Save Strategy
 - Primary: File System Access API (showDirectoryPicker) from Options/Approval UI to pick a folder.
 - Fallback: chrome.downloads.download with `saveAs` suggested filename; user confirms location.

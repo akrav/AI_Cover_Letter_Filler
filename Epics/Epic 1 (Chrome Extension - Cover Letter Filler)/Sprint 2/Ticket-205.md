@@ -13,4 +13,6 @@ Minimize permissions and scope host access to known job domains; document strate
 - Manifest uses minimal permissions.
 - Host permissions narrow by default; dev mode `<all_urls>` documented but disabled in prod.
 
+Status: Completed – 2025-11-18
+
 

@@ -5,10 +5,20 @@
   "action": { "default_title": "AI Cover Letter Filler" },
   "background": { "service_worker": "background.js" },
   "permissions": ["storage", "scripting", "activeTab"],
-  "host_permissions": ["<all_urls>"],
+  "host_permissions": [
+    "*://*.workday.com/*",
+    "*://*.lever.co/*",
+    "*://*.greenhouse.io/*",
+    "*://*.ashbyhq.com/*"
+  ],
   "content_scripts": [
     {
-      "matches": ["<all_urls>"],
+      "matches": [
+        "*://*.workday.com/*",
+        "*://*.lever.co/*",
+        "*://*.greenhouse.io/*",
+        "*://*.ashbyhq.com/*"
+      ],
       "js": ["shared/messaging.js", "content.js"],
       "run_at": "document_idle"
     }
