@@ -47,6 +47,12 @@
   container.appendChild(status);
   container.appendChild(toggleBtn);
   document.documentElement.appendChild(container);
+  // Offline mode badge
+  chrome.storage.local.get(['offlineMode'], (d) => {
+    if (d && d.offlineMode) {
+      status.textContent = 'Status: Ready (Offline)';
+    }
+  });
   // Initialize from storage (persisted) with session fallback
   chrome.storage.local.get(['panelVisibility'], (d) => {
     const saved = d.panelVisibility || sessionStorage.getItem('ai_clf_panel');

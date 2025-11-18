@@ -8,6 +8,7 @@
   const schemaVersionEl = document.getElementById('schemaVersion');
   const telemetryOptInEl = document.getElementById('telemetryOptIn');
   const retentionDaysEl = document.getElementById('retentionDays');
+  const offlineModeEl = document.getElementById('offlineMode');
   const exportTelemetryBtn = document.getElementById('exportTelemetry');
   const clearTelemetryBtn = document.getElementById('clearTelemetry');
   const hotkeyEl = document.getElementById('hotkey');
@@ -40,7 +41,7 @@
   }
 
   function load() {
-    chrome.storage.local.get(['apiKey', 'model', 'budgetCap', 'strictness', 'schemaVersion', 'telemetryOptIn', 'hotkey', 'retentionDays'], (data) => {
+    chrome.storage.local.get(['apiKey', 'model', 'budgetCap', 'strictness', 'schemaVersion', 'telemetryOptIn', 'hotkey', 'retentionDays', 'offlineMode'], (data) => {
       apiKeyEl.value = data.apiKey ? '********' : '';
       modelEl.value = data.model || 'gpt-4o-mini';
       budgetCapEl.value = typeof data.budgetCap === 'number' ? String(data.budgetCap) : '0.10';
@@ -49,6 +50,7 @@
       telemetryOptInEl.checked = !!data.telemetryOptIn;
       hotkeyEl.value = data.hotkey || 'Ctrl+Shift+K';
       retentionDaysEl.value = String(data.retentionDays || 90);
+      offlineModeEl.checked = !!data.offlineMode;
     });
   }
 
@@ -58,7 +60,7 @@
     const newModel = modelEl.value;
     const newBudget = parseFloat(budgetCapEl.value || '0.10');
     const newStrictness = strictnessEl.value;
-    const updates = { model: newModel, budgetCap: newBudget, strictness: newStrictness, telemetryOptIn: !!telemetryOptInEl.checked, hotkey: hotkeyEl.value || 'Ctrl+Shift+K', retentionDays: parseInt(retentionDaysEl.value || '90', 10) };
+    const updates = { model: newModel, budgetCap: newBudget, strictness: newStrictness, telemetryOptIn: !!telemetryOptInEl.checked, hotkey: hotkeyEl.value || 'Ctrl+Shift+K', retentionDays: parseInt(retentionDaysEl.value || '90', 10), offlineMode: !!offlineModeEl.checked };
     // Only update apiKey if user entered non-empty visible value (avoid revealing/storing masked)
     const enteredKey = apiKeyEl.value;
     if (enteredKey && enteredKey !== '********') {
