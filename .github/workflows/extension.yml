@@ -8,18 +8,27 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+        node: [18, 20]
+    runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 'lts/*'
+          node-version: ${{ matrix.node }}
           cache: 'npm'
       - name: Install
         run: |
           if [ -f package.json ]; then npm ci; else echo "No package.json (stub)"; fi
+      - name: Tests (docs/unit stub)
+        run: |
+          echo "Run doc-based tests (spec files) - stub"
+          ls -R tests || true
       - name: Lint
         run: |
           if [ -f package.json ]; then npm run lint --if-present; else echo "no lint (stub)"; fi
@@ -29,7 +38,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: extension-dist
+          name: extension-dist-${{ matrix.os }}-node${{ matrix.node }}
           path: extension/dist
           if-no-files-found: ignore
 
