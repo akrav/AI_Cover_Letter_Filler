@@ -13,4 +13,6 @@ Set up a robust message bus between content scripts and the background worker.
 - Messages round-trip with correlation IDs.
 - Timeouts and errors surfaced to content script cleanly.
 
+Status: Completed – 2025-11-18
+
 

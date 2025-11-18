@@ -18,6 +18,7 @@
 - TICKET-201 — MV3 manifest scaffold (stub): Status: Completed – 2025-11-18 ([manifest.json](../extension/manifest.json), [manifest.spec.md](../tests/extension/sprint2/ticket-201/manifest.spec.md))
 - TICKET-220 — Vite/TS build scripts and dev workflow: Status: Pending
 - TICKET-202 — Content script injection (bootstrap only): Status: Completed – 2025-11-18 ([content.js](../extension/content.js), [injection.spec.md](../tests/extension/sprint2/ticket-202/injection.spec.md))
+- TICKET-203 — Background service worker messaging bus: Status: Completed – 2025-11-18 ([background.js](../extension/background.js), [messaging.js](../extension/shared/messaging.js), [messaging.spec.md](../tests/extension/sprint2/ticket-203/messaging.spec.md))
 - TICKET-221 — Platform detection hook (Workday/Lever/Greenhouse): Status: Pending
 - TICKET-203 — Background service worker messaging bus: Status: Pending
 - TICKET-204 — Options page: API keys and settings (storage): Status: Pending
