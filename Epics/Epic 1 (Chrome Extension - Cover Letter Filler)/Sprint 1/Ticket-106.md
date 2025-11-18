@@ -15,4 +15,6 @@ Pick the extension build scaffolding (Vite + TS), directory structure, and bundl
 - Build scripts (dev/build) documented.
 - Notes on hot-reload/dev convenience included.
 
+Status: Completed – 2025-11-18
+
 

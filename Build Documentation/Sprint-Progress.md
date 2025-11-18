@@ -5,7 +5,7 @@
 - TICKET-103 — Style modeling rubric and descriptors: Status: Completed – 2025-11-18 ([Style Modeling Rubric.md](./Style Modeling Rubric.md), [style_rubric_examples.md](../tests/docs/sprint1/ticket-103/style_rubric_examples.md))
 - TICKET-104 — Model selection and cost plan: Status: Completed – 2025-11-18 ([LLM & RAG Strategy.md](./LLM & RAG Strategy.md), [cost_scenarios.md](../tests/docs/sprint1/ticket-104/cost_scenarios.md))
 - TICKET-105 — Backend API surface (spec): Status: Completed – 2025-11-18 ([Backend API Spec.md](./Backend API Spec.md), [api_examples.md](../tests/docs/sprint1/ticket-105/api_examples.md))
-- TICKET-106 — MV3 structure and build tooling decision: Status: Pending
+- TICKET-106 — MV3 structure and build tooling decision: Status: Completed – 2025-11-18 ([Extension Build.md](./Extension Build.md), [build_layout.md](../tests/docs/sprint1/ticket-106/build_layout.md))
 - TICKET-107 — Research pipeline & evidence rules (Exa/Browserbase): Status: Pending
 - TICKET-108 — Prompt patterns for style‑preserving, evidence‑bounded fills: Status: Pending
 - TICKET-109 — Approval UI spec (variable table layout): Status: Pending
