@@ -22,8 +22,7 @@
 - TICKET-221 — Platform detection hook (Workday/Lever/Greenhouse): Status: Pending
 - TICKET-204 — Options page: API keys and settings (storage): Status: Completed – 2025-11-18 ([options.html](../extension/options/options.html), [options.spec.md](../tests/extension/sprint2/ticket-204/options.spec.md))
 - TICKET-205 — Permission gating and host allowlist strategy: Status: Completed – 2025-11-18 ([Chrome Extension - Manifest & Permissions.md](./Chrome Extension - Manifest & Permissions.md), [permissions.spec.md](../tests/extension/sprint2/ticket-205/permissions.spec.md))
-- TICKET-205 — Permission gating and host allowlist strategy: Status: Pending
-- TICKET-206 — JD extraction base helpers (shared selectors): Status: Pending
+- TICKET-206 — JD extraction per platform (fixtures): Status: Completed – 2025-11-18 ([jd_extract.js](../extension/shared/jd_extract.js), [jd_extract.spec.md](../tests/extension/sprint2/ticket-206/jd_extract.spec.md))
 - TICKET-214 — JD extraction (Workday): Status: Pending
 - TICKET-215 — JD extraction (Lever): Status: Pending
 - TICKET-216 — JD extraction (Greenhouse): Status: Pending

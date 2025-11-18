@@ -14,4 +14,6 @@ Implement per-platform JD extraction (title, location, description).
 - Extracted description length > N chars on fixtures; includes bullet lists where present.
 - Title and location non-empty when present.
 
+Status: Completed – 2025-11-18
+
 
