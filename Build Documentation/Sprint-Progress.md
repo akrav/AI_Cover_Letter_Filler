@@ -4,7 +4,7 @@
 - TICKET-102 — Template variable syntax and parser spec: Status: Completed – 2025-11-18 ([Template Variables.md](./Template Variables.md), [template_examples.md](../tests/docs/sprint1/ticket-102/template_examples.md))
 - TICKET-103 — Style modeling rubric and descriptors: Status: Completed – 2025-11-18 ([Style Modeling Rubric.md](./Style Modeling Rubric.md), [style_rubric_examples.md](../tests/docs/sprint1/ticket-103/style_rubric_examples.md))
 - TICKET-104 — Model selection and cost plan: Status: Completed – 2025-11-18 ([LLM & RAG Strategy.md](./LLM & RAG Strategy.md), [cost_scenarios.md](../tests/docs/sprint1/ticket-104/cost_scenarios.md))
-- TICKET-105 — Backend API surface (spec): Status: Pending
+- TICKET-105 — Backend API surface (spec): Status: Completed – 2025-11-18 ([Backend API Spec.md](./Backend API Spec.md), [api_examples.md](../tests/docs/sprint1/ticket-105/api_examples.md))
 - TICKET-106 — MV3 structure and build tooling decision: Status: Pending
 - TICKET-107 — Research pipeline & evidence rules (Exa/Browserbase): Status: Pending
 - TICKET-108 — Prompt patterns for style‑preserving, evidence‑bounded fills: Status: Pending

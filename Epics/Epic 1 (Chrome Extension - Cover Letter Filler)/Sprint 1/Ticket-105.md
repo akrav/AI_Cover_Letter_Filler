@@ -15,4 +15,6 @@ Define REST endpoints and payload contracts for profile ingestion, research, gen
 - Zod-like schema examples included for key payloads.
 - Error model with error codes and retry semantics.
 
+Status: Completed – 2025-11-18
+
 
