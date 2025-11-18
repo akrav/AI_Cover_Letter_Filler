@@ -24,8 +24,8 @@
 - TICKET-205 — Permission gating and host allowlist strategy: Status: Completed – 2025-11-18 ([Chrome Extension - Manifest & Permissions.md](./Chrome Extension - Manifest & Permissions.md), [permissions.spec.md](../tests/extension/sprint2/ticket-205/permissions.spec.md))
 - TICKET-206 — JD extraction per platform (fixtures): Status: Completed – 2025-11-18 ([jd_extract.js](../extension/shared/jd_extract.js), [jd_extract.spec.md](../tests/extension/sprint2/ticket-206/jd_extract.spec.md))
 - TICKET-214 — JD extraction (Workday): Status: Completed – 2025-11-18 ([workday_extract.spec.md](../tests/extension/sprint2/ticket-214/workday_extract.spec.md))
-- TICKET-215 — JD extraction (Lever): Status: Pending
-- TICKET-216 — JD extraction (Greenhouse): Status: Pending
+- TICKET-215 — JD extraction (Lever): Status: Completed – 2025-11-18 ([lever_extract.spec.md](../tests/extension/sprint2/ticket-215/lever_extract.spec.md))
+- TICKET-216 — JD extraction (Greenhouse): Status: Completed – 2025-11-18 ([greenhouse_extract.spec.md](../tests/extension/sprint2/ticket-216/greenhouse_extract.spec.md))
 - TICKET-219 — Ashby page detection: Status: Pending
 - TICKET-207 — Company resolver (mapping-only): Status: Completed – 2025-11-18 ([company_resolver.js](../extension/shared/company_resolver.js), [company_resolver.spec.md](../tests/extension/sprint2/ticket-207/company_resolver.spec.md))
 - TICKET-222 — Exa resolver stub + scorer: Status: Pending

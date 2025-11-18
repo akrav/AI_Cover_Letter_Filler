@@ -12,4 +12,6 @@ Implement Greenhouse-specific extraction for title, location, and description.
 ## Acceptance Criteria
 - Extracted description length threshold met; lists captured when present.
 
+Status: Completed – 2025-11-18
+
 
