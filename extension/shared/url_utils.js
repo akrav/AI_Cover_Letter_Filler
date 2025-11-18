@@ -42,5 +42,19 @@ function chooseHomepageFromCandidates(candidates) {
 }
 
 window.UrlUtils = { canonicalizeUrl, getHomepageFromUrl, chooseHomepageFromCandidates };
+/* TICKET-315: Canonical URL normalizer from HTML */
+function findCanonicalFromHtml(html, baseUrl) {
+  try {
+    const doc = new DOMParser().parseFromString(String(html || ''), 'text/html');
+    const link = doc.querySelector('link[rel="canonical"]');
+    if (!link) return null;
+    const href = link.getAttribute('href') || '';
+    const abs = new URL(href, baseUrl || location.href).toString();
+    return canonicalizeUrl(abs);
+  } catch {
+    return null;
+  }
+}
+window.UrlUtils.findCanonicalFromHtml = findCanonicalFromHtml;
 
 

@@ -52,6 +52,18 @@
 - TICKET-303 — Crawl pages with robots compliance: Status: Completed – 2025-11-18 ([crawler.js](../extension/shared/crawler.js), [crawler_robots.spec.md](../tests/extension/sprint3/ticket-303/crawler_robots.spec.md))
 - TICKET-313 — Robots.txt allow/deny parser: Status: Completed – 2025-11-18 ([robots_parser.js](../extension/shared/robots_parser.js), [robots_parser.spec.md](../tests/extension/sprint3/ticket-313/robots_parser.spec.md))
 - TICKET-314 — Crawl delay + page cap knobs: Status: Completed – 2025-11-18 ([crawler.js](../extension/shared/crawler.js), [crawl_knobs.spec.md](../tests/extension/sprint3/ticket-314/crawl_knobs.spec.md))
+- TICKET-304 — Quote extraction windows & selectors: Status: Completed – 2025-11-18 ([quote_extractor.js](../extension/shared/quote_extractor.js), [quote_extract.spec.md](../tests/extension/sprint3/ticket-304/quote_extract.spec.md))
+- TICKET-315 — Canonical URL normalizer: Status: Completed – 2025-11-18 ([url_utils.js](../extension/shared/url_utils.js))
+- TICKET-305 — Evidence scoring (relevance, recency, authority): Status: Completed – 2025-11-18 ([scoring.js](../extension/shared/scoring.js), [scoring.spec.md](../tests/extension/sprint3/ticket-305/scoring.spec.md))
+- TICKET-306 — Dedup & clustering (embedding similarity): Status: Completed – 2025-11-18 ([dedup.js](../extension/shared/dedup.js), [dedup_cluster.spec.md](../tests/extension/sprint3/ticket-306/dedup_cluster.spec.md))
+- TICKET-307 — Evidence JSON schema & persistence: Status: Completed – 2025-11-18 ([evidence_store.js](../extension/shared/evidence_store.js), [evidence_store.spec.md](../tests/extension/sprint3/ticket-307/evidence_store.spec.md))
+- TICKET-308 — JD + evidence consolidation to variable candidates: Status: Completed – 2025-11-18 ([consolidation.js](../extension/shared/consolidation.js), [consolidation.spec.md](../tests/extension/sprint3/ticket-308/consolidation.spec.md))
+- TICKET-309 — Strictness levels & insufficiency handling: Status: Completed – 2025-11-18 ([strictness.js](../extension/shared/strictness.js), [strictness.spec.md](../tests/extension/sprint3/ticket-309/strictness.spec.md))
+- TICKET-310 — Per-job caching & snapshot store: Status: Completed – 2025-11-18 ([cache.js](../extension/shared/cache.js), [cache.spec.md](../tests/extension/sprint3/ticket-310/cache.spec.md))
+- TICKET-311 — Backoff & retry policy: Status: Completed – 2025-11-18 ([error_policy.js](../extension/shared/error_policy.js), [backoff.spec.md](../tests/extension/sprint3/ticket-311/backoff.spec.md))
+- TICKET-312 — Error surfacing & user prompts: Status: Completed – 2025-11-18 ([error_policy.js](../extension/shared/error_policy.js), [errors.spec.md](../tests/extension/sprint3/ticket-312/errors.spec.md))
+- TICKET-316 — HTML sanitizer for crawled content: Status: Completed – 2025-11-18 ([sanitizer.js](../extension/shared/sanitizer.js), [sanitizer.spec.md](../tests/extension/sprint3/ticket-316/sanitizer.spec.md))
+- TICKET-317 — Prompt/data safety tests (sanitized-only path): Status: Completed – 2025-11-18 ([sanitized_path.spec.md](../tests/extension/sprint3/ticket-317/sanitized_path.spec.md))
 - TICKET-302 — Homepage detection & canonical URL finder: Status: Pending
 - TICKET-303 — Crawl pages with robots compliance: Status: Pending
 - TICKET-313 — Robots.txt allow/deny parser: Status: Pending
