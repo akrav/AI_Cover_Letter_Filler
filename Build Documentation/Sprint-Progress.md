@@ -11,7 +11,7 @@
 - TICKET-109 — Approval UI spec (variable table layout): Status: Completed – 2025-11-18 ([Ticket](../Epics/Epic 1 (Chrome Extension - Cover Letter Filler)/Sprint 1/Ticket-109.md), [Approval UI Spec.md](./Approval UI Spec.md), [approval_examples.md](../tests/docs/sprint1/ticket-109/approval_examples.md))
 - TICKET-110 — Export plan (DOCX/PDF) and folder workflow: Status: Completed – 2025-11-18 ([Ticket](../Epics/Epic 1 (Chrome Extension - Cover Letter Filler)/Sprint 1/Ticket-110.md), [Export Plan.md](./Export Plan.md), [export_examples.md](../tests/docs/sprint1/ticket-110/export_examples.md))
 - TICKET-111 — Security & permissions checklist: Status: Completed – 2025-11-18 ([Ticket](../Epics/Epic 1 (Chrome Extension - Cover Letter Filler)/Sprint 1/Ticket-111.md), [Security Checklist.md](./Security Checklist.md), [security_checklist.md](../tests/docs/sprint1/ticket-111/security_checklist.md))
-- TICKET-112 — Update Sprint-Progress.md entries: Status: Pending ([Ticket](../Epics/Epic 1 (Chrome Extension - Cover Letter Filler)/Sprint 1/Ticket-112.md))
+- TICKET-112 — Update Sprint-Progress.md entries: Status: Completed – 2025-11-18 ([Ticket](../Epics/Epic 1 (Chrome Extension - Cover Letter Filler)/Sprint 1/Ticket-112.md), [sprint_progress_snapshot.md](../tests/docs/sprint1/ticket-112/sprint_progress_snapshot.md))
 
 ## Epic 1 (Chrome Extension - Cover Letter Filler) — Sprint 2
 
