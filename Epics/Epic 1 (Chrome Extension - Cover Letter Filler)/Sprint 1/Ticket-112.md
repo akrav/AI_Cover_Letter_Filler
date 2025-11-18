@@ -14,4 +14,6 @@ Add rows for Sprint 1 tickets and mark initial status as “Pending”.
 - Links to ticket files included.
 - Committed with an “epic planning” message.
 
+Status: Completed – 2025-11-18
+
 
