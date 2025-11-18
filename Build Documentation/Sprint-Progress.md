@@ -49,6 +49,9 @@
 
 - TICKET-301 — Exa search client (retry, rate limit, stubs): Status: Completed – 2025-11-18 ([exa_client.js](../extension/shared/exa_client.js), [exa_client.spec.md](../tests/extension/sprint3/ticket-301/exa_client.spec.md))
 - TICKET-302 — Homepage detection & canonical URL finder: Status: Completed – 2025-11-18 ([url_utils.js](../extension/shared/url_utils.js), [homepage_canonical.spec.md](../tests/extension/sprint3/ticket-302/homepage_canonical.spec.md))
+- TICKET-303 — Crawl pages with robots compliance: Status: Completed – 2025-11-18 ([crawler.js](../extension/shared/crawler.js), [crawler_robots.spec.md](../tests/extension/sprint3/ticket-303/crawler_robots.spec.md))
+- TICKET-313 — Robots.txt allow/deny parser: Status: Completed – 2025-11-18 ([robots_parser.js](../extension/shared/robots_parser.js), [robots_parser.spec.md](../tests/extension/sprint3/ticket-313/robots_parser.spec.md))
+- TICKET-314 — Crawl delay + page cap knobs: Status: Completed – 2025-11-18 ([crawler.js](../extension/shared/crawler.js), [crawl_knobs.spec.md](../tests/extension/sprint3/ticket-314/crawl_knobs.spec.md))
 - TICKET-302 — Homepage detection & canonical URL finder: Status: Pending
 - TICKET-303 — Crawl pages with robots compliance: Status: Pending
 - TICKET-313 — Robots.txt allow/deny parser: Status: Pending
