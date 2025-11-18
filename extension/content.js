@@ -39,21 +39,21 @@
   toggleBtn.style.padding = '4px 8px';
   toggleBtn.addEventListener('click', () => {
     const visible = container.style.display !== 'none';
-    if (visible) {
-      container.style.display = 'none';
-      sessionStorage.setItem('ai_clf_panel', 'hidden');
-    } else {
-      container.style.display = '';
-      sessionStorage.setItem('ai_clf_panel', 'visible');
-    }
+    const next = visible ? 'hidden' : 'visible';
+    container.style.display = visible ? 'none' : '';
+    sessionStorage.setItem('ai_clf_panel', next);
+    try { chrome.storage.local.set({ panelVisibility: next }); } catch (_) {}
   });
   container.appendChild(status);
   container.appendChild(toggleBtn);
   document.documentElement.appendChild(container);
-  const saved = sessionStorage.getItem('ai_clf_panel');
-  if (saved === 'hidden') {
-    container.style.display = 'none';
-  }
+  // Initialize from storage (persisted) with session fallback
+  chrome.storage.local.get(['panelVisibility'], (d) => {
+    const saved = d.panelVisibility || sessionStorage.getItem('ai_clf_panel');
+    if (saved === 'hidden') {
+      container.style.display = 'none';
+    }
+  });
   // Platform detection hook
   try {
     const platform = (window.JDExtract && window.JDExtract.detectPlatformFromUrl && window.JDExtract.detectPlatformFromUrl(location.href)) || 'unknown';
