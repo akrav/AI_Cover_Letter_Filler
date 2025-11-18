@@ -35,4 +35,11 @@ Dev mode:
 - Prefer per-session ephemeral tokens when possible.
 - Avoid broad host permissions in production; document domain allowlist.
 
+## Content Security Policy (MV3)
+- Use a restrictive CSP for extension pages:
+  - `script-src 'self'`
+  - `object-src 'self'`
+- Do not use inline scripts or `eval`.
+- Sanitize any dynamic content rendered in UI components.
+
 
