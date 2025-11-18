@@ -15,7 +15,7 @@
 
 ## Epic 1 (Chrome Extension - Cover Letter Filler) — Sprint 2
 
-- TICKET-201 — MV3 manifest scaffold (stub): Status: Pending
+- TICKET-201 — MV3 manifest scaffold (stub): Status: Completed – 2025-11-18 ([manifest.json](../extension/manifest.json), [manifest.spec.md](../tests/extension/sprint2/ticket-201/manifest.spec.md))
 - TICKET-220 — Vite/TS build scripts and dev workflow: Status: Pending
 - TICKET-202 — Content script injection (bootstrap only): Status: Pending
 - TICKET-221 — Platform detection hook (Workday/Lever/Greenhouse): Status: Pending

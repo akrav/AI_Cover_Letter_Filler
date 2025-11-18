@@ -12,4 +12,6 @@ Create a minimal MV3 `manifest.json` with only required fields to unblock dev. S
 ## Acceptance Criteria
 - Manifest includes action/background/content/options.
 
+Status: Completed – 2025-11-18
+
 
