@@ -17,6 +17,9 @@
   const cancelOnboardingBtn = document.getElementById('cancelOnboarding');
   const onboardingStatusEl = document.getElementById('onboardingStatus');
   const clearAllDataBtn = document.getElementById('clearAllData');
+  const exportSettingsBtn = document.getElementById('exportSettings');
+  const importSettingsBtn = document.getElementById('importSettings');
+  const importSettingsFileEl = document.getElementById('importSettingsFile');
   const apiKeyErrorEl = document.getElementById('apiKeyError');
   const budgetCapErrorEl = document.getElementById('budgetCapError');
 
@@ -124,6 +127,69 @@
       statusEl.textContent = 'All data cleared';
       setTimeout(() => { statusEl.textContent = 'Saved'; hide(statusEl); }, 1800);
     });
+  });
+
+  // Export/Import settings (JSON)
+  exportSettingsBtn.addEventListener('click', () => {
+    chrome.storage.local.get(['model', 'budgetCap', 'strictness', 'telemetryOptIn', 'hotkey', 'retentionDays', 'styleProfile'], (data) => {
+      // Exclude apiKey and any service role keys by design
+      const payload = {
+        version: 1,
+        settings: {
+          model: data.model || 'gpt-4o-mini',
+          budgetCap: typeof data.budgetCap === 'number' ? data.budgetCap : 0.10,
+          strictness: data.strictness || 'balanced',
+          telemetryOptIn: !!data.telemetryOptIn,
+          hotkey: data.hotkey || 'Ctrl+Shift+K',
+          retentionDays: data.retentionDays || 90
+        },
+        // styleProfile optional passthrough
+        styleProfile: data.styleProfile || null
+      };
+      const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'settings.json';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+  });
+  importSettingsBtn.addEventListener('click', () => {
+    const file = importSettingsFileEl.files && importSettingsFileEl.files[0];
+    if (!file) {
+      alert('Choose a JSON file to import.');
+      return;
+    }
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      try {
+        const json = JSON.parse(String(e.target.result || '{}'));
+        if (!json || typeof json !== 'object' || !json.settings) throw new Error('Invalid schema');
+        const s = json.settings;
+        const updates = {};
+        if (typeof s.model === 'string') updates.model = s.model;
+        if (typeof s.budgetCap === 'number' && s.budgetCap >= 0) updates.budgetCap = s.budgetCap;
+        if (typeof s.strictness === 'string') updates.strictness = s.strictness;
+        if (typeof s.telemetryOptIn === 'boolean') updates.telemetryOptIn = s.telemetryOptIn;
+        if (typeof s.hotkey === 'string') updates.hotkey = s.hotkey;
+        if (typeof s.retentionDays === 'number') updates.retentionDays = s.retentionDays;
+        // Never import service role keys; ignore apiKey if present
+        if (json.styleProfile && typeof json.styleProfile === 'object') {
+          // Optional: store styleProfile
+          updates.styleProfile = json.styleProfile;
+        }
+        chrome.storage.local.set(updates, () => {
+          show(statusEl);
+          statusEl.textContent = 'Settings imported';
+          setTimeout(() => { statusEl.textContent = 'Saved'; hide(statusEl); }, 1500);
+          load();
+        });
+      } catch (err) {
+        alert('Import failed: ' + (err && err.message ? err.message : 'Invalid JSON'));
+      }
+    };
+    reader.readAsText(file);
   });
 })();
 

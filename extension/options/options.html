@@ -95,6 +95,13 @@
       <button id="clearAllData" type="button" style="background:#b00020;color:#fff;">Clear all local data…</button>
       <div class="hint">Removes all settings and local caches from this extension (with confirmation).</div>
     </div>
+    <hr />
+    <div class="row">
+      <button id="exportSettings" type="button">Export settings JSON</button>
+      <input id="importSettingsFile" type="file" accept="application/json" style="margin-left:8px;" />
+      <button id="importSettings" type="button" style="margin-left:8px;">Import settings</button>
+      <div class="hint">API keys are not imported automatically.</div>
+    </div>
     <script src="options.js"></script>
   </body>
 </html>
