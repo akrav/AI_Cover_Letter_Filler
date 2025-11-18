@@ -34,9 +34,9 @@ extension/
 - Copies `manifest.json` and `public/` into `dist`
 
 ## NPM scripts (planned)
-- `dev`: watch build into `extension/dist` with HMR for options/popup
-- `build`: production build
-- `zip`: package `extension/dist` into `extension.zip`
+- `dev:ext`: watch build into `extension/dist` with HMR for options/popup (stubbed for now)
+- `build:ext`: production build to `extension/dist` (copies assets; Vite to be added)
+- `zip`: package `extension/dist` into `extension.zip` (later)
 
 ## Dev workflow
 1. Run `npm run dev` to watch and rebuild assets.

@@ -1,0 +1,12 @@
+{
+  "name": "ai-cover-letter-filler",
+  "private": true,
+  "version": "0.1.0",
+  "scripts": {
+    "dev:ext": "echo \"Dev server stub (Vite to be added)\"",
+    "build:ext": "rm -rf extension/dist && mkdir -p extension/dist && cp -r extension/manifest.json extension/background.js extension/content.js extension/options extension/shared extension/dist/ && echo \"Built to extension/dist\" && find extension/dist -maxdepth 2 -type f -print"
+  },
+  "devDependencies": {}
+}
+
+
