@@ -12,4 +12,6 @@ Detect platform in the content script and send `{ platform, url }` to background
 ## Acceptance Criteria
 - Workday/Lever/Greenhouse reliably detected on fixtures; unknown pages return `"unknown"`.
 
+Status: Completed – 2025-11-18
+
 

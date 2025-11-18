@@ -54,6 +54,11 @@
   if (saved === 'hidden') {
     container.style.display = 'none';
   }
+  // Platform detection hook
+  try {
+    const platform = (window.JDExtract && window.JDExtract.detectPlatformFromUrl && window.JDExtract.detectPlatformFromUrl(location.href)) || 'unknown';
+    chrome.runtime.sendMessage({ type: 'platform_detected', platform, url: location.href }, () => {});
+  } catch (_) {}
   // Hotkey toggle
   function parseHotkey(str) {
     const parts = String(str || '').toLowerCase().split('+').map(s => s.trim());
