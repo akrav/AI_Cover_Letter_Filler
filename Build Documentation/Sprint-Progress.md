@@ -31,7 +31,7 @@
 - TICKET-222 — Exa resolver stub + scorer: Status: Pending
 - TICKET-208 — Template variable parser (implementation): Status: Completed – 2025-11-18 ([template_parser.js](../extension/shared/template_parser.js), [template_parser.spec.md](../tests/extension/sprint2/ticket-208/template_parser.spec.md))
 - TICKET-209 — UI panel scaffold and toggle: Status: Completed – 2025-11-18 ([content.js](../extension/content.js), [panel.spec.md](../tests/extension/sprint2/ticket-209/panel.spec.md))
-- TICKET-213 — Boot banner and connection hotkey: Status: Pending
+- TICKET-213 — Boot banner and connection hotkey: Status: Completed – 2025-11-18 ([content.js](../extension/content.js), [boot_banner.spec.md](../tests/extension/sprint2/ticket-213/boot_banner.spec.md))
 - TICKET-223 — Panel toggle and hotkey: Status: Pending
 - TICKET-210 — Storage schema versioning and migrations: Status: Completed – 2025-11-18 ([storage_migrations.js](../extension/shared/storage_migrations.js), [storage_migration.spec.md](../tests/extension/sprint2/ticket-210/storage_migration.spec.md))
 - TICKET-211 — Telemetry stub + opt-in switch: Status: Completed – 2025-11-18 ([telemetry.js](../extension/shared/telemetry.js), [telemetry.spec.md](../tests/extension/sprint2/ticket-211/telemetry.spec.md))

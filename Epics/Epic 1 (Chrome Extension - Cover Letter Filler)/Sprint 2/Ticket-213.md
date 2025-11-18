@@ -12,4 +12,6 @@ Show a small “assistant ready” boot banner in-page and add a hotkey to open/
 ## Acceptance Criteria
 - Banner does not overlap critical UI; hotkey configurable and persisted.
 
+Status: Completed – 2025-11-18
+
 

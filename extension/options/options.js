@@ -9,6 +9,7 @@
   const telemetryOptInEl = document.getElementById('telemetryOptIn');
   const exportTelemetryBtn = document.getElementById('exportTelemetry');
   const clearTelemetryBtn = document.getElementById('clearTelemetry');
+  const hotkeyEl = document.getElementById('hotkey');
   const apiKeyErrorEl = document.getElementById('apiKeyError');
   const budgetCapErrorEl = document.getElementById('budgetCapError');
 
@@ -29,13 +30,14 @@
   }
 
   function load() {
-    chrome.storage.local.get(['apiKey', 'model', 'budgetCap', 'strictness', 'schemaVersion', 'telemetryOptIn'], (data) => {
+    chrome.storage.local.get(['apiKey', 'model', 'budgetCap', 'strictness', 'schemaVersion', 'telemetryOptIn', 'hotkey'], (data) => {
       apiKeyEl.value = data.apiKey ? '********' : '';
       modelEl.value = data.model || 'gpt-4o-mini';
       budgetCapEl.value = typeof data.budgetCap === 'number' ? String(data.budgetCap) : '0.10';
       strictnessEl.value = data.strictness || 'balanced';
       schemaVersionEl.textContent = String(data.schemaVersion || 0);
       telemetryOptInEl.checked = !!data.telemetryOptIn;
+      hotkeyEl.value = data.hotkey || 'Ctrl+Shift+K';
     });
   }
 
@@ -45,7 +47,7 @@
     const newModel = modelEl.value;
     const newBudget = parseFloat(budgetCapEl.value || '0.10');
     const newStrictness = strictnessEl.value;
-    const updates = { model: newModel, budgetCap: newBudget, strictness: newStrictness, telemetryOptIn: !!telemetryOptInEl.checked };
+    const updates = { model: newModel, budgetCap: newBudget, strictness: newStrictness, telemetryOptIn: !!telemetryOptInEl.checked, hotkey: hotkeyEl.value || 'Ctrl+Shift+K' };
     // Only update apiKey if user entered non-empty visible value (avoid revealing/storing masked)
     const enteredKey = apiKeyEl.value;
     if (enteredKey && enteredKey !== '********') {
