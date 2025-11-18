@@ -19,7 +19,7 @@
         "*://*.greenhouse.io/*",
         "*://*.ashbyhq.com/*"
       ],
-      "js": ["shared/messaging.js", "shared/jd_extract.js", "content.js"],
+      "js": ["shared/messaging.js", "shared/jd_extract.js", "shared/company_resolver.js", "content.js"],
       "run_at": "document_idle"
     }
   ],

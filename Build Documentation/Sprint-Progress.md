@@ -27,7 +27,7 @@
 - TICKET-215 — JD extraction (Lever): Status: Pending
 - TICKET-216 — JD extraction (Greenhouse): Status: Pending
 - TICKET-219 — Ashby page detection: Status: Pending
-- TICKET-207 — Company resolver (mapping-only): Status: Pending
+- TICKET-207 — Company resolver (mapping-only): Status: Completed – 2025-11-18 ([company_resolver.js](../extension/shared/company_resolver.js), [company_resolver.spec.md](../tests/extension/sprint2/ticket-207/company_resolver.spec.md))
 - TICKET-222 — Exa resolver stub + scorer: Status: Pending
 - TICKET-208 — Template variable parser (implementation): Status: Pending
 - TICKET-209 — UI panel scaffold (skeleton): Status: Pending

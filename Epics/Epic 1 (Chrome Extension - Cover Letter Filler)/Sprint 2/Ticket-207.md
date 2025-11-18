@@ -13,4 +13,6 @@ Resolve company name and homepage from platform context; fallback to Exa search 
 - Confidence > 0.7 on fixtures; method reflects "mapping".
 - Produces canonical HTTPS URLs without tracking params.
 
+Status: Completed – 2025-11-18
+
 
