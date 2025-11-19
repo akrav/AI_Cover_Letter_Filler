@@ -21,10 +21,19 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node }}
-          cache: 'npm'
+          # cache disabled because repository does not commit a lockfile
       - name: Install
         run: |
-          if [ -f package.json ]; then npm ci; else echo "No package.json (stub)"; fi
+          if [ -f package.json ]; then
+            if [ -f package-lock.json ]; then
+              npm ci
+            else
+              echo "No lockfile found; running npm install (no-audit, no-fund)"
+              npm install --no-audit --no-fund
+            fi
+          else
+            echo "No package.json (stub)"
+          fi
       - name: Tests (docs/unit stub)
         run: |
           echo "Run doc-based tests (spec files) - stub"
