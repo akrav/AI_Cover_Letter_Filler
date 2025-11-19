@@ -118,6 +118,25 @@
 - TICKET-512 — Approval panel accessibility polish: Status: Completed – 2025-11-19 ([content.js](../extension/content.js), [a11y.spec.md](../tests/ui/sprint5/ticket-512/a11y.spec.md))
 - TICKET-513 — Accessibility focus order for approval table: Status: Completed – 2025-11-19 ([content.js](../extension/content.js), [focus_order.spec.md](../tests/ui/sprint5/ticket-513/focus_order.spec.md))
 - TICKET-514 — Style badge hover detail popover: Status: Completed – 2025-11-19 ([content.js](../extension/content.js), [style_popover.spec.md](../tests/ui/sprint5/ticket-514/style_popover.spec.md))
+
+### Epic 1 — Sprint 6
+- TICKET-601 — Index historical Q&A with embeddings: Status: Completed – 2025-11-19 ([qa_index.js](../extension/shared/qa_index.js), [index.spec.md](../tests/qa/sprint6/ticket-601/index.spec.md))
+- TICKET-602 — Question normalization and matching: Status: Completed – 2025-11-19 ([qa_normalize.js](../extension/shared/qa_normalize.js), [normalize_match.spec.md](../tests/qa/sprint6/ticket-602/normalize_match.spec.md))
+- TICKET-603 — Grounded Q&A draft with citations: Status: Completed – 2025-11-19 ([qa_generate.js](../extension/shared/qa_generate.js), [qa_generation.spec.md](../tests/qa/sprint6/ticket-603/qa_generation.spec.md))
+- TICKET-604 — Q&A approval UI: Status: Completed – 2025-11-19 ([content.js](../extension/content.js), [qa_approval.spec.md](../tests/ui/sprint6/ticket-604/qa_approval.spec.md))
+- TICKET-605 — Q&A export (DOCX/PDF): Status: Completed – 2025-11-19 ([qa_export.js](../extension/shared/qa_export.js), [qa_export.spec.md](../tests/export/sprint6/ticket-605/qa_export.spec.md))
+- TICKET-606 — Q&A field injection on platforms: Status: Completed – 2025-11-19 ([qa_injection.js](../extension/shared/qa_injection.js), [qa_injection.spec.md](../tests/ui/sprint6/ticket-606/qa_injection.spec.md))
+- TICKET-607 — Cost guardrails & rate limits: Status: Completed – 2025-11-19 ([cost_guard.js](../extension/shared/cost_guard.js), [cost_guard.spec.md](../tests/qa/sprint6/ticket-607/cost_guard.spec.md))
+- TICKET-608 — Crawler improvements for press/news pages: Status: Completed – 2025-11-19 ([crawler_news.js](../extension/shared/crawler_news.js), [press_news.spec.md](../tests/research/sprint6/ticket-608/press_news.spec.md))
+- TICKET-609 — Add Ashby & Workable platform support: Status: Completed – 2025-11-19 ([platform_workable.js](../extension/shared/platform_workable.js), [platform_support.spec.md](../tests/extension/sprint6/ticket-609/platform_support.spec.md))
+- TICKET-610 — E2E across two platforms: Status: Completed – 2025-11-19 ([e2e_dual_platform.md](../tests/e2e/sprint6/ticket-610/e2e_dual_platform.md))
+- TICKET-611 — Error analytics & telemetry improvements: Status: Completed – 2025-11-19 ([Telemetry Taxonomy.md](./Telemetry%20Taxonomy.md), [analytics.spec.md](../tests/telemetry/sprint6/ticket-611/analytics.spec.md))
+- TICKET-612 — Release notes & user guide: Status: Completed – 2025-11-19 ([User Guide.md](./User%20Guide.md), [Release Notes.md](./Release%20Notes.md), [user_guide_checklist.md](../tests/docs/sprint6/ticket-612/user_guide_checklist.md))
+- TICKET-613 — Local Q&A ingestion from documents: Status: Completed – 2025-11-19 ([qa_ingest_local.js](../extension/shared/qa_ingest_local.js), [local_ingest.spec.md](../tests/qa/sprint6/ticket-613/local_ingest.spec.md))
+- TICKET-614 — Clipboard fallback for blocked fields: Status: Completed – 2025-11-19 ([qa_injection.js](../extension/shared/qa_injection.js), [clipboard_fallback.spec.md](../tests/ui/sprint6/ticket-614/clipboard_fallback.spec.md))
+- TICKET-615 — Confidence threshold + retrieved answers popover: Status: Completed – 2025-11-19 ([content.js](../extension/content.js), [qa_confidence_popover.spec.md](../tests/ui/sprint6/ticket-615/qa_confidence_popover.spec.md))
+- TICKET-616 — Embed + upsert Q&A into vector store: Status: Completed – 2025-11-19 ([qa_index.js](../extension/shared/qa_index.js), [embed_upsert.spec.md](../tests/qa/sprint6/ticket-616/embed_upsert.spec.md))
+- TICKET-621 — E2E Q&A on platform B: Status: Completed – 2025-11-19 ([e2e_qa_b.md](../tests/e2e/sprint6/ticket-621/e2e_qa_b.md))
 - TICKET-419 — Template variable replacement engine: Status: Pending
 - TICKET-420 — DOCX writer + test harness: Status: Pending
 - TICKET-421 — HTML render path for PDF: Status: Pending

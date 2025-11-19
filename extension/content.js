@@ -119,6 +119,82 @@
     });
   });
   container.appendChild(autofillBtn);
+  // TICKET-604/615: Q&A approval UI with retrieved answers popover
+  const qaWrap = document.createElement('div');
+  qaWrap.style.marginTop = '12px';
+  container.appendChild(qaWrap);
+  function renderQATable(items) {
+    const rows = (items || []).map((q, idx) => {
+      const retrieved = (q.retrieved || []).slice(0, 3).map(r => `<li>${(r.answer || '').slice(0,80)}… <a href="${r.url||'#'}" target="_blank" rel="noreferrer">src</a> (${Math.round((r.score||0)*100)}%)</li>`).join('');
+      return `<tr>
+        <td style="width:180px">${q.question || ''}</td>
+        <td><ul style="margin:0;padding-left:16px">${retrieved || ''}</ul><button data-idx="${idx}" data-action="retrieve">Retrieve</button></td>
+        <td>${(q.citations||[]).length}</td>
+        <td><input data-idx="${idx}" data-field="draft" value="${(q.draft||'').toString().replace(/\"/g,'&quot;')}" style="width:160px"/></td>
+        <td><input data-idx="${idx}" data-field="final" value="${(q.final||'').toString().replace(/\"/g,'&quot;')}" style="width:160px"/></td>
+        <td><input type="checkbox" data-idx="${idx}" data-field="approved" ${q.approved?'checked':''}/> <button data-idx="${idx}" data-action="inject">Inject</button></td>
+      </tr>`;
+    }).join('');
+    qaWrap.innerHTML = `
+      <div style="font-weight:600;margin-bottom:4px">Q&A</div>
+      <table style="border-collapse:collapse;width:100%;font-size:12px">
+        <thead>
+          <tr>
+            <th>Question</th><th>Retrieved</th><th>Citations</th><th>Draft</th><th>Final</th><th>Approve</th>
+          </tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>
+    `;
+    qaWrap.querySelectorAll('input').forEach(inp => {
+      inp.addEventListener('change', (e) => {
+        const idx = Number(e.target.getAttribute('data-idx'));
+        const field = e.target.getAttribute('data-field');
+        chrome.storage.local.get(['qa_items'], (d) => {
+          const arr = Array.isArray(d.qa_items) ? d.qa_items : [];
+          if (arr[idx]) {
+            if (field === 'approved') arr[idx].approved = e.target.checked;
+            else { arr[idx][field] = e.target.value; arr[idx].approved = false; }
+            chrome.storage.local.set({ qa_items: arr });
+          }
+        });
+      });
+    });
+    qaWrap.querySelectorAll('button[data-action="retrieve"]').forEach(btn => {
+      btn.addEventListener('click', async (e) => {
+        const idx = Number(e.target.getAttribute('data-idx'));
+        chrome.storage.local.get(['qa_items'], async (d) => {
+          const arr = Array.isArray(d.qa_items) ? d.qa_items : [];
+          const it = arr[idx];
+          if (!it) return;
+          const normalized = (window.QANormalize && window.QANormalize.normalizeQuestion(it.question)) || it.question;
+          const topk = await (window.QAIndex && window.QAIndex.searchNearest ? window.QAIndex.searchNearest(normalized, 5) : Promise.resolve([]));
+          it.retrieved = topk;
+          it.citations = (topk || []).map(r => ({ url: r.url || r.source || null, quote: (r.answer || '').slice(0,120) })).filter(c => c.url || c.quote);
+          // Confidence gate
+          const confidence = (topk && topk[0] && topk[0].score) || 0;
+          if (confidence < 0.65) alert('Low confidence matches found. Review retrieved answers before approval.');
+          chrome.storage.local.set({ qa_items: arr });
+        });
+      });
+    });
+    qaWrap.querySelectorAll('button[data-action="inject"]').forEach(btn => {
+      btn.addEventListener('click', async (e) => {
+        const idx = Number(e.target.getAttribute('data-idx'));
+        chrome.storage.local.get(['qa_items'], async (d) => {
+          const arr = Array.isArray(d.qa_items) ? d.qa_items : [];
+          const it = arr[idx];
+          if (!it) return;
+          const res = await (window.QAInjection && window.QAInjection.injectAnswerForQuestion ? window.QAInjection.injectAnswerForQuestion(it.question, it.final || it.draft) : Promise.resolve({ ok:false }));
+          if (!res.ok) alert('Failed to inject. Try clipboard paste.');
+        });
+      });
+    });
+  }
+  chrome.storage.local.get(['qa_items'], (d) => renderQATable(d.qa_items || []));
+  chrome.storage.onChanged.addListener((changes, area) => {
+    if (area === 'local' && changes.qa_items) renderQATable(changes.qa_items.newValue || []);
+  });
   // TICKET-505/514: Style badge with hover popover
   const badge = document.createElement('div');
   badge.setAttribute('role', 'status');

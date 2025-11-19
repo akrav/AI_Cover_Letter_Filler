@@ -1,0 +1,2 @@
+# User Guide (Sprint 6)\n\n1. Install extension (Developer Mode) and load unpacked `extension/`\n2. Open options and set API key, budgets, strictness\n3. Visit a job page (Workday/Lever/Greenhouse/Ashby/Workable)\n4. Press the hotkey to open the panel\n5. Detect & Prepare → Variables → Q&A tabs\n6. Approve Variables and Q&A (fix errors if any)\n7. Export → choose folder → DOCX/PDF + evidence.json created\n\nTroubleshooting:\n- If injection blocked, clipboard fallback copies text for manual paste\n- Check permissions and host allowlist in manifest\n\n*** End Patch
+

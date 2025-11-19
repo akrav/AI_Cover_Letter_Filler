@@ -14,6 +14,9 @@ const Telemetry = (() => {
       });
     });
   }
+  function emitError(event, data) {
+    emit(`error.${event}`, data);
+  }
   function exportJson(cb) {
     chrome.storage.local.get(['telemetryEvents'], (d) => {
       cb(JSON.stringify(d.telemetryEvents || [], null, 2));
@@ -22,7 +25,7 @@ const Telemetry = (() => {
   function clear(cb) {
     chrome.storage.local.remove(['telemetryEvents'], cb);
   }
-  return { emit, exportJson, clear };
+  return { emit, emitError, exportJson, clear };
 })();
 window.Telemetry = Telemetry;
 
