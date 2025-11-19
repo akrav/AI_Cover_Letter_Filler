@@ -83,12 +83,41 @@
 
 ## Epic 1 (Chrome Extension - Cover Letter Filler) — Sprint 4
 
-- TICKET-401 — Style profile builder (implementation): Status: Pending
-- TICKET-402 — Variable table UI (layout + columns): Status: Pending
+- TICKET-401 — Style profile builder (implementation): Status: Completed – 2025-11-18 ([style_profile_builder.js](../extension/shared/style_profile_builder.js), [style_profile.spec.md](../tests/style/sprint4/ticket-401/style_profile.spec.md))
+- TICKET-402 — Variable table UI (layout + columns): Status: Completed – 2025-11-18 ([content.js](../extension/content.js), [variable_table.spec.md](../tests/ui/sprint4/ticket-402/variable_table.spec.md))
 - TICKET-418 — Inline edit + persistence for Variable table: Status: Pending
-- TICKET-403 — Grounded draft generation (JSON): Status: Pending
-- TICKET-404 — In‑style rewrite using style_profile: Status: Pending
-- TICKET-405 — Approval state machine & persistence: Status: Pending
+- TICKET-403 — Grounded draft generation (JSON): Status: Completed – 2025-11-18 ([grounded_generation.js](../extension/shared/grounded_generation.js), [grounded_generation.spec.md](../tests/gen/sprint4/ticket-403/grounded_generation.spec.md))
+- TICKET-404 — In‑style rewrite using style_profile: Status: Completed – 2025-11-18 ([style_rewrite.js](../extension/shared/style_rewrite.js), [style_rewrite.spec.md](../tests/gen/sprint4/ticket-404/style_rewrite.spec.md))
+- TICKET-405 — Approval state machine & persistence: Status: Completed – 2025-11-18 ([approval.js](../extension/shared/approval.js))
+- TICKET-406 — DOCX rendering pipeline: Status: Completed – 2025-11-18 ([docx_render.js](../extension/shared/docx_render.js), [docx_render.spec.md](../tests/export/sprint4/ticket-406/docx_render.spec.md))
+- TICKET-407 — PDF export pipeline: Status: Completed – 2025-11-18 ([pdf_export.js](../extension/shared/pdf_export.js), [pdf_export.spec.md](../tests/export/sprint4/ticket-407/pdf_export.spec.md))
+- TICKET-408 — Directory Picker + downloads fallback: Status: Completed – 2025-11-18 ([save_flow.js](../extension/shared/save_flow.js), [save_flow.spec.md](../tests/export/sprint4/ticket-408/save_flow.spec.md))
+- TICKET-409 — File naming & sanitization: Status: Completed – 2025-11-18 ([naming.js](../extension/shared/naming.js), [naming.spec.md](../tests/export/sprint4/ticket-409/naming.spec.md))
+- TICKET-410 — Evidence bundle (evidence.json): Status: Completed – 2025-11-18 ([evidence_bundle.js](../extension/shared/evidence_bundle.js), [evidence_bundle.spec.md](../tests/export/sprint4/ticket-410/evidence_bundle.spec.md))
+- TICKET-411 — Textarea injection on supported platforms: Status: Completed – 2025-11-18 ([injection.js](../extension/shared/injection.js), [injection.spec.md](../tests/ui/sprint4/ticket-411/injection.spec.md))
+- TICKET-412 — E2E smoke: page → approval → export: Status: Completed – 2025-11-18 ([e2e_smoke.md](../tests/e2e/sprint4/ticket-412/e2e_smoke.md))
+- TICKET-413 — “Autofill All” button + per-field spinner states: Status: Completed – 2025-11-18 ([content.js](../extension/content.js), [autofill_all.spec.md](../tests/ui/sprint4/ticket-413/autofill_all.spec.md))
+- TICKET-414 — Preview export modal: Status: Completed – 2025-11-18 ([preview_modal.spec.md](../tests/ui/sprint4/ticket-414/preview_modal.spec.md))
+- TICKET-419 — Template variable replacement engine: Status: Completed – 2025-11-18 ([template_replace.js](../extension/shared/template_replace.js), [template_replace.spec.md](../tests/gen/sprint4/ticket-419/template_replace.spec.md))
+- TICKET-420 — DOCX writer + test harness: Status: Completed – 2025-11-18 ([docx_harness.spec.md](../tests/export/sprint4/ticket-420/docx_harness.spec.md))
+- TICKET-421 — HTML render path for PDF: Status: Completed – 2025-11-18 ([html_render.js](../extension/shared/html_render.js), [html_render.spec.md](../tests/export/sprint4/ticket-421/html_render.spec.md))
+- TICKET-422 — PDF output + filename suggestion: Status: Completed – 2025-11-18 ([pdf_export.spec.md](../tests/export/sprint4/ticket-407/pdf_export.spec.md), [naming.spec.md](../tests/export/sprint4/ticket-409/naming.spec.md))
+
+### Epic 1 — Sprint 5
+- TICKET-501 — Stylometry feature extractor: Status: Completed – 2025-11-19 ([stylometry.js](../extension/shared/stylometry.js), [stylometry.spec.md](../tests/style/sprint5/ticket-501/stylometry.spec.md))
+- TICKET-502 — Embedding similarity calculator: Status: Completed – 2025-11-19 ([embedding_similarity.js](../extension/shared/embedding_similarity.js), [embedding_similarity.spec.md](../tests/style/sprint5/ticket-502/embedding_similarity.spec.md))
+- TICKET-503 — Authorship classifier baseline: Status: Completed – 2025-11-19 ([authorship_classifier.js](../extension/shared/authorship_classifier.js), [authorship_classifier.spec.md](../tests/style/sprint5/ticket-503/authorship_classifier.spec.md))
+- TICKET-504 — Composite score & thresholds: Status: Completed – 2025-11-19 ([style_composite.js](../extension/shared/style_composite.js), [composite_score.spec.md](../tests/style/sprint5/ticket-504/composite_score.spec.md))
+- TICKET-505 — Style badge UI (with breakdown): Status: Completed – 2025-11-19 ([content.js](../extension/content.js), [style_badge.spec.md](../tests/ui/sprint5/ticket-505/style_badge.spec.md))
+- TICKET-506 — Override dialog & audit log: Status: Completed – 2025-11-19 ([audit_log.js](../extension/shared/audit_log.js), [override_dialog.spec.md](../tests/ui/sprint5/ticket-506/override_dialog.spec.md))
+- TICKET-507 — Style eval dataset curation: Status: Completed – 2025-11-19 ([dataset_manifest.json](../tests/style/fixtures/dataset_manifest.json), [dataset.spec.md](../tests/style/sprint5/ticket-507/dataset.spec.md))
+- TICKET-508 — Golden fixtures for style eval: Status: Completed – 2025-11-19 ([good.txt](../tests/style/fixtures/goldens/good.txt), [bad.txt](../tests/style/fixtures/goldens/bad.txt), [goldens.spec.md](../tests/style/sprint5/ticket-508/goldens.spec.md))
+- TICKET-509 — Continuous eval script: Status: Completed – 2025-11-19 ([style_eval.mjs](../scripts/style_eval.mjs), [continuous_eval.spec.md](../tests/style/sprint5/ticket-509/continuous_eval.spec.md))
+- TICKET-510 — CI guard for style drift: Status: Completed – 2025-11-19 ([extension.yml](../.github/workflows/extension.yml), [ci_guard.spec.md](../tests/style/sprint5/ticket-510/ci_guard.spec.md))
+- TICKET-511 — FP/FN analysis doc: Status: Completed – 2025-11-19 ([Style Eval Analysis.md](./Style%20Eval%20Analysis.md), [analysis_checklist.md](../tests/style/sprint5/ticket-511/analysis_checklist.md))
+- TICKET-512 — Approval panel accessibility polish: Status: Completed – 2025-11-19 ([content.js](../extension/content.js), [a11y.spec.md](../tests/ui/sprint5/ticket-512/a11y.spec.md))
+- TICKET-513 — Accessibility focus order for approval table: Status: Completed – 2025-11-19 ([content.js](../extension/content.js), [focus_order.spec.md](../tests/ui/sprint5/ticket-513/focus_order.spec.md))
+- TICKET-514 — Style badge hover detail popover: Status: Completed – 2025-11-19 ([content.js](../extension/content.js), [style_popover.spec.md](../tests/ui/sprint5/ticket-514/style_popover.spec.md))
 - TICKET-419 — Template variable replacement engine: Status: Pending
 - TICKET-420 — DOCX writer + test harness: Status: Pending
 - TICKET-421 — HTML render path for PDF: Status: Pending

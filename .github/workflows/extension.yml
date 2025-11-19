@@ -42,4 +42,11 @@ jobs:
           path: extension/dist
           if-no-files-found: ignore
 
+# TICKET-510: Style Eval Guard (documentation stub)
+# - name: Style Eval
+#   run: node scripts/style_eval.mjs --manifest tests/style/fixtures/dataset_manifest.json | tee style_report.json
+# - name: Check thresholds
+#   run: |
+#     node -e 'const r=require("./style_report.json"); if(r.composite<0.65) { console.error("Style drift detected"); process.exit(1) }'
+
 

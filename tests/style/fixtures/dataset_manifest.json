@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "classes": ["user_style", "background"],
+  "samples": [
+    { "path": "user1.txt", "label": "user_style" },
+    { "path": "user2.txt", "label": "user_style" },
+    { "path": "bg1.txt", "label": "background" },
+    { "path": "bg2.txt", "label": "background" }
+  ]
+}
+

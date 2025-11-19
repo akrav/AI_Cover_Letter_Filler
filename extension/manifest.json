@@ -19,7 +19,7 @@
         "*://*.greenhouse.io/*",
         "*://*.ashbyhq.com/*"
       ],
-      "js": ["shared/messaging.js", "shared/jd_extract.js", "shared/url_utils.js", "shared/robots_parser.js", "shared/crawler.js", "shared/quote_extractor.js", "shared/scoring.js", "shared/dedup.js", "shared/evidence_store.js", "shared/consolidation.js", "shared/strictness.js", "shared/cache.js", "shared/error_policy.js", "shared/sanitizer.js", "shared/exa_client.js", "shared/exa_resolver.js", "shared/company_resolver.js", "shared/storage_migrations.js", "shared/retention.js", "shared/telemetry.js", "content.js"],
+      "js": ["shared/messaging.js", "shared/jd_extract.js", "shared/url_utils.js", "shared/robots_parser.js", "shared/crawler.js", "shared/quote_extractor.js", "shared/scoring.js", "shared/dedup.js", "shared/evidence_store.js", "shared/consolidation.js", "shared/strictness.js", "shared/cache.js", "shared/error_policy.js", "shared/sanitizer.js", "shared/injection.js", "shared/stylometry.js", "shared/embedding_similarity.js", "shared/authorship_classifier.js", "shared/style_composite.js", "shared/audit_log.js", "shared/exa_client.js", "shared/exa_resolver.js", "shared/company_resolver.js", "shared/storage_migrations.js", "shared/retention.js", "shared/telemetry.js", "content.js"],
       "run_at": "document_idle"
     }
   ],
