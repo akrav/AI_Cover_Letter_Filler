@@ -62,6 +62,8 @@ export function loadSharedModules(dom, repoRoot) {
     'extension/shared/style_profile_builder.js',
     'extension/shared/style_rewrite.js',
     'extension/shared/html_render.js',
+    'extension/shared/template_parser.js',
+    'extension/shared/template_replace.js',
     'extension/shared/naming.js',
     'extension/shared/pdf_export.js',
     'extension/shared/docx_render.js',

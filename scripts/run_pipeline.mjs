@@ -3,7 +3,6 @@
 //   node scripts/run_pipeline.mjs --url "<job URL>" --out "./out" [--firstName Adam] [--styleDir ./samples] [--qaManifest ./tests/style/fixtures/dataset_manifest.json] [--topK 5]
 import fs from 'fs';
 import path from 'path';
-import fetch from 'node-fetch';
 import { fileURLToPath } from 'url';
 import { createDom, loadSharedModules, installChromeStorageMock } from './lib/load_shared_into_dom.mjs';
 import { createClient } from '@supabase/supabase-js';
@@ -98,7 +97,13 @@ async function main() {
   const templateDocx = args.templateDocx ? path.resolve(args.templateDocx) : null;
   await ensureDir(outDir);
 
-  const res = await fetch(url);
+  // Prefer built-in fetch on Node >=18; fallback to node-fetch only if needed
+  const doFetch = async (input) => {
+    if (globalThis.fetch) return globalThis.fetch(input);
+    const { default: nf } = await import('node-fetch');
+    return nf(input);
+  };
+  const res = await doFetch(url);
   const html = await res.text();
   const dom = createDom(html, url);
   installChromeStorageMock(dom);
